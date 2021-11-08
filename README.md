@@ -127,7 +127,6 @@ What you'll see if you click on a region:
 | Debugging | M | 2hrs| 0 hrs | 0hrs|
 | Flexbox| M | 2hrs | 0hrs | 0hrs|
 | Debugging | M | 1.5hrs| 0 hrs | 0hrs|
-
 | Total | H | 25.5hrs| 0hrs | 0hrs |
 
 ## Code Snippet
