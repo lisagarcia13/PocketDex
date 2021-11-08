@@ -87,8 +87,8 @@ What you'll see if you click on a region:
 
 #### MVP 
 
-- Find and use external api 
-- Create Search bar to allow user to search for Pokemon
+- Each Pokemon will display their characteristics when clicked on
+- Create a search bar to allow user to search for Pokemon
 - Have buttons that are organized by Pokemon Regions
 
 #### PostMVP  
