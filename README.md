@@ -1,11 +1,10 @@
 
 
-## Project Name :
-
-<h1>Pokedex</h1>
+## Project Name : 
+<h1>Pocketdex</h1>
 
 ## Project Description
-My project will be to create a Pokedex. Pokemon will be organzied by buttons that have region names. There will be a search button for user's to look them up as well. 
+My project will be to create a Pokedex. Pokemon will be organzied by buttons that have region names. A search bar will be avaliable to have users search by pokemon name. 
 
 ## API and Data Sample
 I will be using http://pokeapi.co/ as my API source. Here is a code snippet :
@@ -131,13 +130,7 @@ What you'll see if you click on a region:
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+TBD
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes. 
+TBD
