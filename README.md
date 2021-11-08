@@ -117,16 +117,16 @@ What you'll see if you click on a region:
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML| L | 1.5 hrs| 0 hrs| 0hrs|
+| HTML| L | 2 hrs| 0 hrs| 0hrs|
 | CSS | H | 4 hrs| 0 hrs| 0hrs|
 | Adding/Linking forms | H | 2hrs| 0hrs | 0hrs|
 | Working with API | H | 6hrs| 0hrs| 0hrs|
 | JS | H | 6hrs| 0hrs| 0hrs|
-|Research| M | 2hrs| 0hrs| 0hrs|
-| Debugging | M | 2hrs| 0 hrs | 0hrs|
-| Flexbox| M | 2hrs | 0hrs | 0hrs|
-| Debugging | M | 1.5hrs| 0 hrs | 0hrs|
-| Total | H | 25.5hrs| 0hrs | 0hrs |
+|Research| M | 3hrs| 0hrs| 0hrs|
+| Debugging | M | 3hrs| 0 hrs | 0hrs|
+| Flexbox| M | 3hrs | 0hrs | 0hrs|
+| Debugging | M | 3hrs| 0 hrs | 0hrs|
+| Total | H | 32hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
