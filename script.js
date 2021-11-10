@@ -11,28 +11,11 @@ const alola = document.querySelector(".alola");
 const galar = document.querySelector(".galar");
 const test = document.querySelector("#test")
 
-
-
-function showKantoPokemon(pokeNames) {
-  console.log(pokeNames);
-  // pokeNames.forEach((pokeNames) => {
-  //   test.innerText = pokeNames.results[pokeNames].name;
-  // });
-  let listOfPokemon = [];
-  for (let i = 0; i < 150; i++) {
-    listOfPokemon.push(pokeNames.results[i].name);
-  }
-  test.innerText = listOfPokemon;
-
-  //test.innerText = pokeNames.results[0].name;
-
-}
-
 async function getKantoPokemon() {
   try {
     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=151");
-    let pokemonName = res.data;
-    showKantoPokemon(pokemonName);
+    let kantoPokemonName = res.data;
+    showKantoPokemon(kantoPokemonName);
   } catch (err) {
     alert(err);
   }
@@ -40,11 +23,43 @@ async function getKantoPokemon() {
 
 getKantoPokemon();
 
+function showKantoPokemon(kantoPokemon) {
+  console.log(kantoPokemon);
+  for (let i = 0; i < 151; i++) {
+    let p = document.createElement("p");
+    document.body.appendChild(p);
+    p.innerText = kantoPokemon.results[i].name;
+    console.log(p)
+    let k = document.createElement("img");
+    k.src = kantoPokemon.results[i].url
+
+    //--- comment is incomplete. should return iamge url. 
+    // fetch(k)
+    //   .then(k => k.json())
+    //   .then(picture => {
+    //     HTMLstr = "";
+    //     document.getElementById("output").innerHTML = HTMLstr;
+
+    //     k.kantoPokemon.foreach
+    //     })
+    // document.body.appendChild(k);
+
+    //comment below returns a broken img...
+    //k.innerHTML = kantoPokemon.results[i].url;
+  }
+
+}
+
 const searchForm = document.querySelector("#pokemon-data");
+const searchText = document.querySelector("#search");
+
+
 
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("submitted")
+  let kantoPokemon = searchText.value;
+  getKantoPokemon(kantoPokemon);
+
 })
 
 kanto.addEventListener('click', getKantoPokemon);
