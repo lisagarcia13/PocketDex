@@ -23,31 +23,35 @@ async function getKantoPokemon() {
 
 getKantoPokemon();
 
+
+
 function showKantoPokemon(kantoPokemon) {
   console.log(kantoPokemon);
   for (let i = 0; i < 151; i++) {
     let p = document.createElement("p");
     document.body.appendChild(p);
     p.innerText = kantoPokemon.results[i].name;
-    console.log(p)
-    let k = document.createElement("img");
-    k.src = kantoPokemon.results[i].url
-
-    //--- comment is incomplete. should return iamge url. 
-    // fetch(k)
-    //   .then(k => k.json())
-    //   .then(picture => {
-    //     HTMLstr = "";
-    //     document.getElementById("output").innerHTML = HTMLstr;
-
-    //     k.kantoPokemon.foreach
-    //     })
-    // document.body.appendChild(k);
-
-    //comment below returns a broken img...
-    //k.innerHTML = kantoPokemon.results[i].url;
+    kantoPictures(kantoPokemon.results[i].url);
   }
 
+}
+async function kantoPictures(kantoURL) {
+  try {
+    const res = await axios.get(kantoURL);
+    let images = res.data.sprites;
+    displayKantoPictures(images);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+kantoPictures();
+
+function displayKantoPictures(images) {
+  console.log(images);
+  let k = document.createElement("img");
+  k.src = images.front_default;
+  test.appendChild(k);
 }
 
 const searchForm = document.querySelector("#pokemon-data");
@@ -63,3 +67,5 @@ searchForm.addEventListener("submit", (e) => {
 })
 
 kanto.addEventListener('click', getKantoPokemon);
+
+
