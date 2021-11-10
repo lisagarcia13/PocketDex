@@ -57,20 +57,39 @@ function displayKantoPictures(images) {
 async function kantoAbilities() {
   try {
     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/2/");
-    let abilities = res.data;
-    displayKantoAbilities(abilities);
+    let moves = res.data.abilities;
+    displayKantoAbilities(moves);
   } catch (err) {
     console.log(err);
   }
 }
 kantoAbilities();
 
-function displayKantoAbilities(abilities) {
-  console.log(abilities);
+function displayKantoAbilities(moves) {
+  console.log(moves);
   let info = document.createElement("p");
+  info.innerText = moves[0].ability.name;
   test.appendChild(info);
-
 }
+
+async function kantoTypes() {
+  try {
+    const res = await axios.get("https://pokeapi.co/api/v2/pokemon/2/");
+    let pokeTypes = res.data.types;
+    displayKantoTypes(pokeTypes);
+
+  } catch (err) {
+    console.log(err);
+  }
+}
+kantoTypes();
+
+function displayKantoTypes(pokeTypes) {
+  console.log(pokeTypes)
+}
+
+
+
 
 const searchForm = document.querySelector("#pokemon-data");
 const searchText = document.querySelector("#search");
@@ -79,10 +98,9 @@ const searchText = document.querySelector("#search");
 
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let kantoPokemon = searchText.value;
-  // code below is suppose to clear search
-  // test.innerHTML = "";
-  getKantoPokemon(kantoPokemon);
+  test.innerHTML = "";
+  pokeName.innerHTML = "";
+  getKantoPokemon(searchText.value);
 
 })
 
