@@ -11,17 +11,6 @@ const alola = document.querySelector(".alola");
 const galar = document.querySelector(".galar");
 
 
-
-
-// Promise.all(emptyArray).then((results) => {
-// const kantoPokemon = results.map((kantoPokemonName) => ({
-
-
-
-//   }));
-//   console.log(kantoPokemon);
-// });
-
 const pokeInfo = document.querySelector(".pokemon-info")
 const displayPokemon = document.querySelector(".container");
 
@@ -48,15 +37,16 @@ function showKantoPokemon(kantoPokemonName) {
   <h3> ${kantoPokemonName.id}. ${kantoPokemonName.name} </h3>
   `
   displayPokemon.appendChild(pokemonDiv);
-  hideKanto();
 }
-function hideKanto() {
-  displayPokemon.style.display = "none";
-}
+
 //divided into separate functions
 // called this function in my HTML
 function kantoButton() {
-  displayPokemon.style.display = "block";
+  if (displayPokemon.style.display === 'none') {
+    displayPokemon.style.display = 'block';
+  } else {
+    displayPokemon.style.display = 'none';
+  }
 }
 const searchForm = document.querySelector("#pokemon-data");
 const searchText = document.querySelector("#search");
