@@ -10,7 +10,7 @@ const galar = document.querySelector(".galar");
 
 const pokeInfo = document.querySelector(".pokemon-info");
 const displayPokemon = document.querySelector(".container");
-//Object Pokemon
+//Created an Object Pokemon
 const Pokemon = {
   id: 0,
   name: "",
@@ -29,6 +29,7 @@ async function getPokemonFromRange(start, end) {
     try {
       const res = await axios.get(url);
       //AllPokemon.push(res.data); //Implement later
+      // Pushing object to an array to get key values easier.
       showPokemon(res.data)
     } catch (err) {
       alert(err);
@@ -40,7 +41,7 @@ function showPokemon(pokemon) {
   console.log(`LOG: showPokemon(${pokemon})`);
   const pokemonDiv = document.createElement("div");
   pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" />
-  <h3> ${pokemon.id} ${pokemon.name} </h3>`;
+  <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
 }
 
