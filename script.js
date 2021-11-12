@@ -43,6 +43,8 @@ function showPokemon(pokemon) {
   pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" />
   <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
+  pokemonDiv.style.display = "inline-block";
+  pokemonDiv.style.margin = "30px";
 }
 
 //Searches for a Pokemon in all Pokemon

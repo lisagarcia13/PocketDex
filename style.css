@@ -1,22 +1,55 @@
+/* Main Content */
+
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 h1 {
   text-align: center;
   padding: 30px;
   font-family: 'VT323';
   font-size: 100px;
-  color: azure;
+  color: whitesmoke;
+  border: solid;
 }
 body {
-  background-color: #ef233c;
+  background-color: #ef233c ;
 }
 #pokemon-data {
   text-align: center;
 }
+.container{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'VT323';
+  font-size: 20px;
+  color: whitesmoke;
+  display: inline-flex;
+  
+}
+
+/*  Search Bar */
+input[type=text] {
+  width: 150px;
+  padding: 9px;
+
+}
+input[type=text],
+#submit{
+  vertical-align: middle;
+}
+.search-bar {
+  padding-bottom: 15px;
+  
+}
+
 
 /* Button styling */
 #submit {
   font-family: 'VT323';
-  font-size: 20px;
+  font-size: 30px;
+  float: inline;
+}
+button {
+  margin: 30px;
+  padding: 8px;
 }
 .kanto {
   font-family: 'VT323';
@@ -50,16 +83,7 @@ body {
   font-family: 'VT323';
   font-size: 30px;
 }
-.search-bar {
-  padding-bottom: 15px;
-}
 
 
-/* Main Content */
-.container{
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'VT323';
-  font-size: 20px;
-  color: white;
-}
+
+
