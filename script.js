@@ -9,53 +9,6 @@ const unova = document.querySelector(".unova");
 const kalos = document.querySelector(".kalos");
 const alola = document.querySelector(".alola");
 const galar = document.querySelector(".galar");
-// const test = document.querySelector("#test");
-// const pokeName = document.querySelector(".kanto-name");
-
-// async function getKantoPokemon() {
-//   try {
-//     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=151");
-//     let kantoPokemonName = res.data;
-//     showKantoPokemon(kantoPokemonName);
-//   } catch (err) {
-//     alert(err);
-//   }
-// }
-
-// getKantoPokemon();
-
-
-
-// function showKantoPokemon(kantoPokemon) {
-//   console.log(kantoPokemon);
-//   for (let i = 0; i < 151; i++) {
-//     let p = document.createElement("p");
-//     pokeName.appendChild(p);
-//     p.innerText = kantoPokemon.results[i].name;
-//     kantoPictures(kantoPokemon.results[i].url);
-//     // kantoAbilities(kantoPokemon.abilties[i]);
-//   }
-
-// }
-// async function kantoPictures(kantoURL) {
-//   try {
-//     const res = await axios.get(kantoURL);
-//     let images = res.data.sprites;
-//     displayKantoPictures(images);
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
-
-// function displayKantoPictures(images) {
-//   console.log(images);
-//   let k = document.createElement("img");
-//   k.src = images.front_default;
-//   test.appendChild(k);
-// }
-
-
-
 
 
 
@@ -89,22 +42,22 @@ getKantoPokemon();
 
 function showKantoPokemon(kantoPokemonName) {
   console.log(kantoPokemonName);
-  // const kantoPokemon = {
-  //   name: kantoPokemonName.name,
-  //   id: kantoPokemonName.id,
-  //   image: kantoPokemonName.sprites["front_default"],
-  //   ability: kantoPokemonName.abilities.map((ability) => ability.ability.name).join(','),
-  //   type: kantoPokemonName.types.map((type) => type.type.name).join(',')
-  // }
-  // console.log(kantoPokemon);
   const pokemonDiv = document.createElement("div");
   pokemonDiv.innerHTML = ` 
   <img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${kantoPokemonName.id}.png" />
   <h3> ${kantoPokemonName.id}. ${kantoPokemonName.name} </h3>
   `
   displayPokemon.appendChild(pokemonDiv);
+  hideKanto();
 }
-
+function hideKanto() {
+  displayPokemon.style.display = "none";
+}
+//divided into separate functions
+// called this function in my HTML
+function kantoButton() {
+  displayPokemon.style.display = "block";
+}
 const searchForm = document.querySelector("#pokemon-data");
 const searchText = document.querySelector("#search");
 
@@ -118,8 +71,18 @@ searchForm.addEventListener("submit", (e) => {
 
 })
 
-kanto.addEventListener('click', (e) => {
-  e.preventDefault();
-  displayPokemon = ""
-  getKantoPokemon();
-});
+
+// kanto.addEventListener('click', (e) => {
+//   e.preventDefault();
+
+//   // displayPokemon.innerHTML = "";
+// });
+
+// try for search bar
+// function removeKantoPokemon() {
+//   const removeElement = document.querySelector(".container");
+//   while (removeElement.lastChild) {
+//     removeElement.removeChild(removeElement.lastChild);
+//   }
+// }
+// removeKantoPokemon();
