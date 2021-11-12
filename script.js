@@ -40,11 +40,15 @@ async function getPokemonFromRange(start, end) {
 function showPokemon(pokemon) {
   console.log(`LOG: showPokemon(${pokemon})`);
   const pokemonDiv = document.createElement("div");
-  pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" />
+  pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"  width= "200px" />
   <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
+
   pokemonDiv.style.display = "inline-block";
   pokemonDiv.style.margin = "30px";
+  pokemonDiv.style.background = "#8d99ae";
+  pokemonDiv.style.boxShadow = "0 4px 9px 0";
+
 }
 
 //Searches for a Pokemon in all Pokemon

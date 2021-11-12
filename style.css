@@ -6,11 +6,11 @@ h1 {
   padding: 30px;
   font-family: 'VT323';
   font-size: 100px;
-  color: whitesmoke;
+  color: #ffba08;
   border: solid;
 }
 body {
-  background-color: #ef233c ;
+  background-color: #ef3c2d;
 }
 #pokemon-data {
   text-align: center;
@@ -20,8 +20,7 @@ body {
   text-transform: uppercase;
   font-family: 'VT323';
   font-size: 20px;
-  color: whitesmoke;
-  display: inline-flex;
+  color: black;
   
 }
 
@@ -49,39 +48,50 @@ input[type=text],
 }
 button {
   margin: 30px;
-  padding: 8px;
+  padding: 9px;
+ 
 }
 .kanto {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #60d394;
 }
 .johto {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #FFD700;
 }
 .hoenn {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #0466c8;
 }
 .sinnoh {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #fffafa;
 }
 .unova {
   font-family: 'VT323';
   font-size: 30px;
+  color:whitesmoke;
+  background-color:#000000 ;
+
 }
 .kalos {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #e5383b;
 }
 .alola {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #7d53de;
 }
 .galar {
   font-family: 'VT323';
   font-size: 30px;
+  background-color: #4cc9f0;
 }
 
 
