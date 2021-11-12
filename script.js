@@ -67,8 +67,8 @@ async function searchPokemon(findme) {
 
 // Search in progress
 function searchObj(obj, query) {
-  for (var key in obj) {
-    var value = obj[key];
+  for (let key in obj) {
+    let value = obj[key];
     if (typeof value === 'object') {
       return searchObj(value, query);
     }
