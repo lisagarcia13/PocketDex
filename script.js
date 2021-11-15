@@ -15,14 +15,11 @@ const displayPokemon = document.querySelector(".container");
 
 //Gets Kanto Pokemon data from range. START and END are arguments.
 async function getPokemonFromRange(start, end) {
-  console.log(`LOG: getPokemonFromRange(${start}, ${end})`);
   searchText.value = "";
   for (let i = start; i <= end; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     try {
       const res = await axios.get(url);
-      console.log(res.data);
-      // Pushing object to an array to get key values easier.
       showPokemon(res.data)
     } catch (err) {
       alert(err);
@@ -32,17 +29,14 @@ async function getPokemonFromRange(start, end) {
 
 //Displays Pokemon with response data.id
 function showPokemon(pokemon) {
-  console.log(`LOG: showPokemon(${pokemon})`);
   const pokemonDiv = document.createElement("div");
   pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" width = "250px"/>
   <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
-
 }
 
 //Searches for a Pokemon in all Pokemon
 async function searchPokemon(findme) {
-  console.log(`LOG: searchPokemon(${findme})`);
   const url = `https://pokeapi.co/api/v2/pokedex/national/`; //using national dex for pokemon lookup
   try {
     const res = await axios.get(url);
@@ -51,7 +45,7 @@ async function searchPokemon(findme) {
       console.log("Search Successful.");
       let pokemonID = pokeball[0].entry_number; //object uses national pokedex to return object with ID and name. 
       getPokemonFromRange(pokemonID, pokemonID); //uses function to lookup pokemon by ID. 
-    } else { //if array is 
+    } else {
       console.log("Search Failed. Try Again.");
     }
   } catch (err) {
@@ -60,7 +54,6 @@ async function searchPokemon(findme) {
 }
 
 
-// // Search in progress
 function searchObj(obj, findme) {
   for (let key in obj) {
     let value = obj[key]; //set value EQUAL to a key value of itself.
@@ -82,7 +75,6 @@ function searchObj(obj, findme) {
 
 function Gen1Button() {
   getPokemonFromRange(1, 151);
-
   displayPokemon.style.display = 'flex';
 }
 function Gen2Button() {
