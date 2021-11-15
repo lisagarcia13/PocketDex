@@ -5,7 +5,7 @@
 
 ## Deployed Website :
 
-"https://lisagarcia13.github.io/Pokemon/"
+https://lisagarcia13.github.io/Pokemon/
 
 ## Project Description
 My project will be to create a Pokedex. Pokemon will be organzied by buttons that have region names. A search bar will be avaliable to have users search by pokemon name. 
