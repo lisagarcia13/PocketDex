@@ -38,9 +38,10 @@ function showPokemon(pokemon) {
   <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
 
+  //CSS
   pokemonDiv.style.display = "inline-block";
   pokemonDiv.style.margin = "30px";
-  pokemonDiv.style.background = "#8d99ae";
+  pokemonDiv.style.background = "#dee2e6";
   pokemonDiv.style.boxShadow = "0 4px 9px 0";
 }
 
@@ -65,14 +66,20 @@ async function searchPokemon(findme) {
 
 
 // // Search in progress
-function searchObj(obj, query) {
+function searchObj(obj, findme) {
   for (let key in obj) {
-    let value = obj[key];
-    console.log(value);
-    if (typeof value === 'object') {
-      return searchObj(value, query);
+    let value = obj[key]; //set value EQUAL to a key value of itself.
+    if (typeof value === 'object') { //if value is type object, then recusrively call searchObj to go deeper into object values.
+      return searchObj(value, findme); //call searchObj
     }
-    if (typeof value === 'string' && value.toLowerCase().indexOf(query.toLowerCase()) > -1) {
+
+    //HERE: at this point, the value is now equal to 1 of 3 things: 
+    //Pokemon Name, 
+    //Pokemon ID, 
+    //Pokemon Sprite URL
+
+    //We now check if the value is equal to the "findme" value. 
+    if (typeof value === 'string' && value.toLowerCase().indexOf(findme.toLowerCase()) > -1) {
       return obj;
     }
   }
@@ -115,7 +122,7 @@ const searchForm = document.querySelector("#pokemon-data");
 const searchText = document.querySelector("#search");
 
 
-// In progress
+
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   displayPokemon.innerHTML = "";
