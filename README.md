@@ -3,6 +3,10 @@
 ## Project Name : 
 <h1>Pocketdex</h1>
 
+## Deployed Website :
+
+"https://lisagarcia13.github.io/Pokemon/"
+
 ## Project Description
 My project will be to create a Pokedex. Pokemon will be organzied by buttons that have region names. A search bar will be avaliable to have users search by pokemon name. 
 
@@ -149,3 +153,4 @@ I had the most trouble getting my search bar to work. I ran into a lot of issues
 
 
 ## Change Log
+
