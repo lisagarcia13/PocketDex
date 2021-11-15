@@ -88,7 +88,9 @@ What you'll see if you click on a region:
 #### MVP 
 
 - Use external API to grab information to build website
-- 
+- HTML is used to build the basic template
+- Basic CSS to add styling
+- Javascript for functionality
 - Create a search bar to allow user to search for Pokemon
 - Have buttons that are organized by Pokemon Regions
 
@@ -123,15 +125,27 @@ What you'll see if you click on a region:
 | CSS | H | 4 hrs| 6 hrs| 6hrs|
 | Adding/Linking forms | H | 2hrs| 5hrs | 5hrs|
 | Working with API | H | 6hrs| 6hrs| 6hrs|
-| JS | H | 6hrs| hrs| 0hrs|
-|Research| M | 3hrs| 5hrs| 5hrs|
-| Debugging | M | 3hrs| 0 hrs | 0hrs|
-| Flexbox| M | 3hrs | 0hrs | 0hrs|
-| Total | H | 29hrs| 0hrs | 0hrs |
+| JS | H | 6hrs| 7hrs| 7hrs|
+|Research| M | 3hrs| 5hrs| 4hrs|
+| Debugging | M | 3hrs| 4hrs | 3hrs|
+| Search Bar| H | 3hrs | 5hrs | 5hrs|
+| Total | H | 29hrs| 37.5hrs | 37.5hrs |
 
 ## Code Snippet
 
-TBD
+```
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  displayPokemon.innerHTML = "";
+  const input = searchText.value;
+  if (input.length > 0) {
+    searchPokemon(input);
+  }
+})
+
+```
+
+I had the most trouble getting my search bar to work. I ran into a lot of issues with Pokemon either repeating or no Pokemon coming up when searched. I'm most proud of it because it may not be the most complex, but it was my biggest challenge I accomplished.
+
 
 ## Change Log
-TBD
