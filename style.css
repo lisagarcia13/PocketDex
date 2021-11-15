@@ -15,12 +15,18 @@ body {
 #pokemon-data {
   text-align: center;
 }
+
 .container{
   text-align: center;
   text-transform: uppercase;
   font-family: 'VT323';
   font-size: 20px;
   color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   
 }
 
@@ -33,6 +39,7 @@ input[type=text] {
 input[type=text],
 #submit{
   vertical-align: middle;
+ 
   
 }
 .search-bar {
@@ -53,6 +60,7 @@ input[type=text],
   background-color: #fff1e6;
 }
 button {
+  
   margin: 30px;
   padding: 9px;
  border-radius: 10px;

@@ -34,15 +34,12 @@ async function getPokemonFromRange(start, end) {
 function showPokemon(pokemon) {
   console.log(`LOG: showPokemon(${pokemon})`);
   const pokemonDiv = document.createElement("div");
-  pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"  width= "200px" />
+  pokemonDiv.innerHTML = `<img src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" width = "250px"/>
   <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
 
-  //CSS
-  pokemonDiv.style.display = "inline-block";
-  pokemonDiv.style.margin = "30px";
-  pokemonDiv.style.background = "#dee2e6";
-  pokemonDiv.style.boxShadow = "0 4px 9px 0";
+
+  // pokemonDiv.style.boxShadow = "0 4px 9px 0";
 }
 
 //Searches for a Pokemon in all Pokemon
@@ -88,35 +85,35 @@ function searchObj(obj, findme) {
 function Gen1Button() {
   getPokemonFromRange(1, 151);
   // DisplayGeneration(1, 151);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen2Button() {
   getPokemonFromRange(152, 251);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen3Button() {
   getPokemonFromRange(252, 386);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen4Button() {
   getPokemonFromRange(387, 493);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen5Button() {
   getPokemonFromRange(494, 649);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen6Button() {
   getPokemonFromRange(650, 721);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen7Button() {
   getPokemonFromRange(722, 809);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 function Gen8Button() {
   getPokemonFromRange(810, 898);
-  displayPokemon.style.display = 'block';
+  displayPokemon.style.display = 'flex';
 }
 const searchForm = document.querySelector("#pokemon-data");
 const searchText = document.querySelector("#search");
@@ -126,6 +123,7 @@ const searchText = document.querySelector("#search");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   displayPokemon.innerHTML = "";
+
   const input = searchText.value;
   if (input.length > 0) {
     searchPokemon(input);
