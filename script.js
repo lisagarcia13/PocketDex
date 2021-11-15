@@ -38,8 +38,6 @@ function showPokemon(pokemon) {
   <h3> ${pokemon.id}. ${pokemon.name} </h3>`;
   displayPokemon.appendChild(pokemonDiv);
 
-
-  // pokemonDiv.style.boxShadow = "0 4px 9px 0";
 }
 
 //Searches for a Pokemon in all Pokemon
@@ -84,7 +82,7 @@ function searchObj(obj, findme) {
 
 function Gen1Button() {
   getPokemonFromRange(1, 151);
-  // DisplayGeneration(1, 151);
+
   displayPokemon.style.display = 'flex';
 }
 function Gen2Button() {
@@ -123,7 +121,6 @@ const searchText = document.querySelector("#search");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   displayPokemon.innerHTML = "";
-
   const input = searchText.value;
   if (input.length > 0) {
     searchPokemon(input);

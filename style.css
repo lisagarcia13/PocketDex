@@ -5,7 +5,7 @@ h1 {
   text-align: center;
   padding: 30px;
   font-family: 'VT323';
-  font-size: 150px;
+  font-size: 130px;
   color: #fffafa;
   
 }
@@ -21,13 +21,13 @@ body {
   text-transform: uppercase;
   font-family: 'VT323';
   font-size: 20px;
-  color: black;
+  color: #fffafa;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  
+
 }
 
 /*  Search Bar */
@@ -39,11 +39,11 @@ input[type=text] {
 input[type=text],
 #submit{
   vertical-align: middle;
- 
   
 }
 .search-bar {
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  
   
 }
 
@@ -60,7 +60,6 @@ input[type=text],
   background-color: #fff1e6;
 }
 button {
-  
   margin: 30px;
   padding: 9px;
  border-radius: 10px;
@@ -71,6 +70,7 @@ button {
   font-size: 30px;
   background-color: #2a8000;
   border-color: green;
+  color:#fffafa;
 }
 .kanto:hover{
   background-color: #a8e4a0;
@@ -82,6 +82,7 @@ button {
   font-size: 30px;
   background-color: #FFD700;
   border-color: yellow;
+  color:#fffafa;
 }
 .johto:hover{
   background-color: #ffff66;
@@ -92,6 +93,7 @@ button {
   font-size: 30px;
   background-color: #0466c8;
   border-color: rgb(41, 80, 165);
+  color:#fffafa;
 }
 .hoenn:hover{
   background-color: #77b5fe;
@@ -124,6 +126,7 @@ button {
   font-size: 30px;
   background-color: #e5383b;
   border-color: lightcoral;
+  color:#fffafa;
 }
 .kalos:hover{
   background-color: #f08080;
@@ -134,6 +137,7 @@ button {
   font-size: 30px;
   background-color: #7d53de;
   border-color: rgba(133, 78, 184, 0.87);
+  color:#fffafa;
 }
 .alola:hover{
   background-color: #9370db;
@@ -144,6 +148,7 @@ button {
   font-size: 30px;
   background-color: #4cc9f0;
   border-color: lightblue;
+  color:#fffafa;
 }
 .galar:hover{
   background-color: #9bddff;
@@ -152,12 +157,46 @@ button {
 
 
 
-
-@media only screen and (max-width: 450px){
-  body {
-    width:100%
+/* IPad Media */
+@media only screen and (max-width: 768px){
+  h1 {
+    font-size: 50px;
+  }
+  .container {
+   font-size: 15px;
   }
   button {
-    display: inline-flex;
+    margin: 15px;
+  }
+  input[type=text] {
+    padding: 7px;
+  
+  }
+  #submit{
+    font-size: 20px;
+  }
+  .kanto{
+    font-size: 20px;
+  }
+  .johto{
+    font-size: 20px;
+  }
+  .hoenn{
+    font-size: 20px;
+  }
+  .sinnoh{
+    font-size: 20px;
+  }
+  .unova{
+    font-size: 20px;
+  }
+  .kalos{
+    font-size: 20px;
+  }
+  .alola{
+    font-size: 20px;
+  }
+  .galar{
+    font-size: 20px;
   }
 }
