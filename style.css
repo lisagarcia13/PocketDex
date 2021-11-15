@@ -45,31 +45,47 @@ input[type=text],
   font-family: 'VT323';
   font-size: 30px;
   float: inline;
+  border-radius: 10px;
 }
 button {
   margin: 30px;
   padding: 9px;
+ border-radius: 10px;
+ }
  
-}
-.kanto {
+ .kanto {
   font-family: 'VT323';
   font-size: 30px;
-  background-color: #60d394;
+  background-color: #2a8000;
 }
+.kanto:hover{
+  background-color: #a8e4a0;
+  
+}
+
 .johto {
   font-family: 'VT323';
   font-size: 30px;
   background-color: #FFD700;
+}
+.johto:hover{
+  background-color: #ffff66;
 }
 .hoenn {
   font-family: 'VT323';
   font-size: 30px;
   background-color: #0466c8;
 }
+.hoenn:hover{
+  background-color: azure;
+}
 .sinnoh {
   font-family: 'VT323';
   font-size: 30px;
   background-color: #fffafa;
+}
+.sinnoh:hover{
+  background-color: azure;
 }
 .unova {
   font-family: 'VT323';
@@ -78,20 +94,32 @@ button {
   background-color:#000000 ;
 
 }
+.unova:hover{
+  background-color: azure;
+}
 .kalos {
   font-family: 'VT323';
   font-size: 30px;
   background-color: #e5383b;
+}
+.kalos:hover{
+  background-color: azure;
 }
 .alola {
   font-family: 'VT323';
   font-size: 30px;
   background-color: #7d53de;
 }
+.alola:hover{
+  background-color: azure;
+}
 .galar {
   font-family: 'VT323';
   font-size: 30px;
   background-color: #4cc9f0;
+}
+.galar:hover{
+  background-color: azure;
 }
 
 

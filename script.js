@@ -10,25 +10,18 @@ const galar = document.querySelector(".galar");
 
 const pokeInfo = document.querySelector(".pokemon-info");
 const displayPokemon = document.querySelector(".container");
-//Created an Object Pokemon
-const Pokemon = {
-  id: 0,
-  name: "",
-  types: [],
-  abilities: [],
-  bio: ""
-};
-//Array of all Object: Pokemon
-const AllPokemon = [];
 
-//Gets Kanto Pokemon data from [1-151]
+
+
+//Gets Kanto Pokemon data from range. START and END are arguments.
 async function getPokemonFromRange(start, end) {
-  console.log(`LOG: getPokemonFromRange(${start}, ${end})`)
+  console.log(`LOG: getPokemonFromRange(${start}, ${end})`);
+  searchText.value = "";
   for (let i = start; i <= end; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     try {
       const res = await axios.get(url);
-      //AllPokemon.push(res.data); //Implement later
+      console.log(res.data);
       // Pushing object to an array to get key values easier.
       showPokemon(res.data)
     } catch (err) {
@@ -36,6 +29,7 @@ async function getPokemonFromRange(start, end) {
     }
   }
 }
+
 //Displays Pokemon with response data.id
 function showPokemon(pokemon) {
   console.log(`LOG: showPokemon(${pokemon})`);
@@ -48,7 +42,6 @@ function showPokemon(pokemon) {
   pokemonDiv.style.margin = "30px";
   pokemonDiv.style.background = "#8d99ae";
   pokemonDiv.style.boxShadow = "0 4px 9px 0";
-
 }
 
 //Searches for a Pokemon in all Pokemon
@@ -75,10 +68,11 @@ async function searchPokemon(findme) {
 function searchObj(obj, query) {
   for (let key in obj) {
     let value = obj[key];
+    console.log(value);
     if (typeof value === 'object') {
       return searchObj(value, query);
     }
-    if (typeof value === 'string' && value.toLowerCase().indexOf(query.toLowerCase())) {
+    if (typeof value === 'string' && value.toLowerCase().indexOf(query.toLowerCase()) > -1) {
       return obj;
     }
   }
@@ -86,6 +80,7 @@ function searchObj(obj, query) {
 
 function Gen1Button() {
   getPokemonFromRange(1, 151);
+  // DisplayGeneration(1, 151);
   displayPokemon.style.display = 'block';
 }
 function Gen2Button() {
@@ -125,5 +120,7 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   displayPokemon.innerHTML = "";
   const input = searchText.value;
-  searchPokemon(input);
+  if (input.length > 0) {
+    searchPokemon(input);
+  }
 })

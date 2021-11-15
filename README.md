@@ -87,13 +87,15 @@ What you'll see if you click on a region:
 
 #### MVP 
 
-- Each Pokemon will display their characteristics when clicked on
+- Use external API to grab information to build website
+- 
 - Create a search bar to allow user to search for Pokemon
 - Have buttons that are organized by Pokemon Regions
 
 #### PostMVP  
 
 - Be able to save Pokemon to favorites
+- Grab more Pokemon Information (ex. Types, Moves, Abilities, etc.)
 - Creating a feature that would allow the user to toggle the skin of the Pokedex to change depending on the generation. 
 - Adding a random Pokemon generator
 
@@ -101,12 +103,12 @@ What you'll see if you click on a region:
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|November 8th| Project Approval/ Getting files set up  | Incomplete
-|November 9th|  Working with the API| Incomplete
-|November 10th|  Putting my code together| Incomplete
-|November 11th|  Setting up functionality/ MVP checklist| Incomplete
-|November 12th| Barebones Website running  | Incomplete
-|November 13th/14th| Finishing touches/CSS | Incomplete
+|November 8th| Project Approval/ Getting files set up  | Complete
+|November 9th|  Working with the API| Complete
+|November 10th|  Putting my code together| Complete
+|November 11th|  Setting up functionality/ MVP checklist| Complete
+|November 12th| Barebones Website running  | Complete
+|November 13th/14th| Finishing touches/CSS | Complete
 |November 15th| Presentations | Incomplete
 
 ## Priority Matrix
@@ -117,12 +119,12 @@ What you'll see if you click on a region:
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML| L | 2 hrs| 0 hrs| 0hrs|
-| CSS | H | 4 hrs| 0 hrs| 0hrs|
-| Adding/Linking forms | H | 2hrs| 0hrs | 0hrs|
-| Working with API | H | 6hrs| 0hrs| 0hrs|
-| JS | H | 6hrs| 0hrs| 0hrs|
-|Research| M | 3hrs| 0hrs| 0hrs|
+| HTML| L | 2 hrs| 1.5 hrs| 1.5hrs|
+| CSS | H | 4 hrs| 6 hrs| 6hrs|
+| Adding/Linking forms | H | 2hrs| 5hrs | 5hrs|
+| Working with API | H | 6hrs| 6hrs| 6hrs|
+| JS | H | 6hrs| hrs| 0hrs|
+|Research| M | 3hrs| 5hrs| 5hrs|
 | Debugging | M | 3hrs| 0 hrs | 0hrs|
 | Flexbox| M | 3hrs | 0hrs | 0hrs|
 | Total | H | 29hrs| 0hrs | 0hrs |
