@@ -105,6 +105,7 @@ function Gen8Button() {
   getPokemonFromRange(810, 898);
   displayPokemon.style.display = 'flex';
 }
+
 const searchForm = document.querySelector("#pokemon-data");
 const searchText = document.querySelector("#search");
 
